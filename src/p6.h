@@ -1,0 +1,11 @@
+//
+// Created by rudri on 10/11/2020.
+//
+
+#ifndef POO2_UNIT2_STANDARD_LIBRARY_V2021_2_P6_H
+#define POO2_UNIT2_STANDARD_LIBRARY_V2021_2_P6_H
+
+
+void question_6_1();
+
+#endif //POO2_UNIT2_STANDARD_LIBRARY_V2021_2_P6_H
