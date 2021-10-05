@@ -4,7 +4,7 @@
 **cmake project:** poo2_unit2_standard_library_v2021_2
 ## Instructions
 
-## Question #1 - split_range (2.5)
+## Question #1 - split_range (2.5 points)
 
 Generar una función template `split_range`, que reciba como parámetros un contenedor y un número `n` y permita dividir el contenedor en `n` contenedores, si el valor `n` no es múltiplo del tamaño del contenedor, los ítems restantes de la división deberán ser almacenados en el último contenedor. El resultado o valor de retorno deberá ser un contenedor que contenga los contenedores devueltos, siendo vector el contenedor por defecto, el template tendrá la posibilidad de personalizar en contenedor de resultado.
   
