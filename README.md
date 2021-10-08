@@ -17,39 +17,54 @@ auto resultado = split_range(v1, 3};
     // resultado[2] = {5, 6, 7};
  ```
 
-## Question #2 - sumar_rango (2.5 points)
+## Question #2 - sum_range (2.5 points)
 
-Escribir una función template `sumar_rango` que permita la suma de los valores de 2 contenedores. Si uno de los contenedores es de menor tamaño, el contenedor de menor tamaño se sumará repetidamente con otro contenedor hasta completar el tamaño del mayor.
+Escribir una función template `sum_range` que permita la suma de los valores de 2 contenedores. Si uno de los contenedores es de menor tamaño, el contenedor de menor tamaño se sumará repetidamente con otro contenedor hasta completar el tamaño del mayor.
 
 **Use Case #1:**
 ```cpp
 vector<int> v1 = {1, 3, 4};
 vector<int> v2 = {4, 5, 6};
-auto v3 = sum_rango(v1, v2}; // {5, 8, 10}
+auto v3 = sum_range(v1, v2}; // {5, 8, 10}
 ```
 **Use Case #2:**
 ```cpp
 list<int> v1 = {1, 2, 3, 4, 5};
 list<int> v2 = {10, 20};
-auto v3 = sum_rango(v1, v2}; // {11, 22, 13, 24, 15}
+auto v3 = sum_range(v1, v2}; // {11, 22, 13, 24, 15}
 ```
+## Question #3 - delete_range (2.5 points)
 
-## Question #3 - delete_items (2.5 points)
-
-Escribir una función template `delete_items` que permita eliminar un valor específico o una lista de valores de un contenedor secuencial: 
+Escribir una función template `delete_items` que permita eliminar un valor específico o una lista de valores de un contenedor secuencial:
 
 **Use Case #1:**
 ```cpp
 vector<int> v1 = {1, 3, 4, 1, 3, 2, 3, 4, 6, 5}; 
-auto v3 = delete_items(v1, 1); // {3, 4, 3, 2, 3, 4, 6, 5}
+auto v3 = delete_range(v1, 1); // {3, 4, 3, 2, 3, 4, 6, 5}
 ```
 **Use Case #2:**
 ```cpp
 list<int> v1 = {1, 3, 4, 1, 3, 2, 3, 4, 6, 5}; 
-auto v3 = delete_items(v1, {1, 4});	 // {3, 3, 2, 3, 6, 5}
+auto v3 = delete_range(v1, {1, 4});	 // {3, 3, 2, 3, 6, 5}
 ```
 
-## Question #4 - unpack (2.5 points)
+## Question #4 - delete_duplicated (2.5 points)
+
+Escribir una función template `delete_duplicated` que permita eliminar todos los valores duplicados:
+
+**Use Case #1:**
+```cpp
+vector<int> v1 = {1, 3, 4, 1, 3, 2, 3, 4, 6, 5}; 
+auto v2 = delete_duplicated(v1);        // {1, 3, 4, 2, 6, 5}
+```
+**Use Case #2:**
+```cpp
+list<int> v3 = {1, 1, 1, 1, 3, 2, 2, 2, 2, 5}; 
+auto v4 = delete_duplicated(v3);	    // {1, 3, 2, 5}
+```
+
+
+## Question #5 - unpack (2.5 points)
 
 La librería estándar de C++ brinda un contenedor simple conocido como `std::tuple`, que permite almacenar valores de diferente tipo, ejemplo:
 ```cpp
@@ -80,21 +95,6 @@ string last_name;
 double height;
 unpack(key, first_name, last_name, height) = t1;
 std::cout << key <<  " "<< first_name << last_name << height << endl;
-```
-
-## Question #5 - delete_duplicated (2.5 points)
-
-Escribir una función template `delete_duplicated` que permita eliminar todos los valores duplicados:
-
-**Use Case #1:**
-```cpp
-vector<int> v1 = {1, 3, 4, 1, 3, 2, 3, 4, 6, 5}; 
-auto v2 = delete_duplicated(v1);        // {1, 3, 4, 2, 6, 5}
-```
-**Use Case #2:**
-```cpp
-list<int> v3 = {1, 1, 1, 1, 3, 2, 2, 2, 2, 5}; 
-auto v4 = delete_duplicated(v3);	    // {1, 3, 2, 5}
 ```
 
 ## Question #6 - zip (2.5 points)
